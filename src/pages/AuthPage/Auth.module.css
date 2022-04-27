@@ -1,0 +1,14 @@
+.Auth {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+  /* border: solid red; */
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.Auth .SignUpLoginButton {
+  /* position: relative; */
+}

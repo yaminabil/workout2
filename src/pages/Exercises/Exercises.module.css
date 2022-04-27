@@ -1,0 +1,161 @@
+.fullContainer {
+  /* border: solid purple; */
+}
+
+.Exercises {
+  /* border: solid black; */
+  margin-top: 9rem;
+  display: grid;
+  grid-template-columns: 20vw 60vw 20vw;
+  /* column-gap: 6%; */
+}
+
+.exerciseTypeContainer {
+  padding: 50px;
+  background-color: lightgray;
+  border: 0.1vmin solid var(--tan-3);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  width: 80%;
+  margin: 0 auto;
+  column-gap: 5vw;
+  row-gap: 5vw;
+  height: 60vw;
+}
+.type {
+  display: grid;
+  grid-column: 1/3;
+  height: 30%;
+  /* background-color: rebeccapurple;
+  color: var(--tan-2); */
+  border: solid rebeccapurple;
+
+  color: rebeccapurple;
+  font-weight: 550;
+  border: solid rebeccapurple;
+  border-radius: 20px;
+  align-items: center;
+}
+.oneTypeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.oneTypeText {
+  background-color: rebeccapurple;
+  color: var(--tan-2);
+  font-weight: 600;
+  border: solid rebeccapurple;
+  margin: 0 auto;
+  font-size: large;
+  padding: 4px 15px;
+  border-radius: 20px;
+}
+.oneTypeText:hover {
+  color: rebeccapurple;
+  background-color: var(--tan-2);
+  transition: all 0.5s;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.enduranceImage {
+  height: 80%;
+  background-image: url("https://images.theconversation.com/files/408392/original/file-20210625-14120-1r9q74e.jpg?ixlib=rb-1.1.0&rect=60%2C191%2C6720%2C3360&q=45&auto=format&w=668&h=324&fit=crop");
+  background-size: cover;
+  border-radius: 10px;
+}
+.strengthImage {
+  height: 80%;
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-lifting-dumbells-at-cross-training-gym-royalty-free-image-1625601682.jpg?crop=0.612xw:0.918xh;0.252xw,0.0816xh&resize=640:*");
+  background-size: cover;
+  border-radius: 10px;
+}
+.flexibilityImage {
+  height: 80%;
+  background-image: url("https://www.mensjournal.com/wp-content/uploads/mf/man-stretching-1280.jpg?w=900&h=506&crop=1&quality=86&strip=all");
+  background-size: cover;
+  border-radius: 10px;
+}
+.balanceImage {
+  height: 80%;
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/complex-body-movement-royalty-free-image-941096852-1547665020.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+/* the styling for the left side  */
+.left {
+  /* border: solid red; */
+  background-color: lightgray;
+  border-radius: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleLeft {
+  border: solid rebeccapurple;
+  /* color: var(--tan-2); */
+  color: rebeccapurple;
+  /* background-color: rebeccapurple; */
+  margin: 50px auto;
+  width: 50%;
+  padding: 1.5vw;
+  align-items: center;
+  font-size: x-large;
+  /* padding: 15px; */
+  border-radius: 20px;
+  text-align: center;
+}
+
+.navigateOptions {
+  /* border: solid red; */
+  padding-left: 0px;
+  margin-top: 50%;
+}
+
+.navigateOptions > li {
+  list-style: none;
+  margin-top: 2vw;
+  margin-left: 0px;
+
+  /* float: left; */
+}
+li:hover {
+  color: rebeccapurple;
+  cursor: pointer;
+
+  transform: scale(1.2);
+}
+
+.right {
+  /* border: solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  /* background-color: lightgray; */
+  border-radius: 20px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.titleRight {
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  align-items: center;
+  font-size: x-large;
+  /* padding: 15px; */
+}
+.titleRight > p {
+  color: var(--tan-2);
+  margin-top: 40%;
+}
