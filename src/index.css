@@ -29,6 +29,12 @@ label {
 input:focus {
   border-color: rebeccapurple;
 }
+textarea:focus {
+  border-color: rebeccapurple;
+}
+textarea {
+  outline: none;
+}
 
 input {
   padding: 1vmin;

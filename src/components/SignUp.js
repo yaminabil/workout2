@@ -28,14 +28,20 @@ export default function SignUp({ setUser }) {
   return (
     <div className="form-container">
       <form onSubmit={handleSignup}>
-        <label>Name : </label>
-        <input type="text" name="name" onChange={handleChange} />
+        <div>
+          <label>Name : </label>
+          <input type="text" name="name" onChange={handleChange} />
+        </div>
 
-        <label>Email : </label>
-        <input type="text" name="email" onChange={handleChange} />
+        <div>
+          <label>Email : </label>
+          <input type="text" name="email" onChange={handleChange} />
+        </div>
 
-        <label>Password : </label>
-        <input type="password" name="password" onChange={handleChange} />
+        <div>
+          <label>Password : </label>
+          <input type="password" name="password" onChange={handleChange} />
+        </div>
 
         <br />
         <button type="submit"> Sign Up </button>
