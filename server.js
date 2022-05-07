@@ -13,6 +13,7 @@ app.use(require("./config/checkToken"));
 app.use("/api/exercises", exerciseRouter);
 app.use("/api/users", userRouter);
 
+/// last step
 app.listen(PORT, (req, res) => {
   console.log(`runing on port ${PORT}`);
 });
