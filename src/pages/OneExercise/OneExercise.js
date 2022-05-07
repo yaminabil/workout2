@@ -45,6 +45,7 @@ export default function OneExercise() {
   };
   // handle edit
   const handleEdit = (key) => {
+    console.log(key);
     if (key.style.color === "red") {
       key.style.color = "black";
       key.classList.add(`${styles.disabled}`);
@@ -91,7 +92,7 @@ export default function OneExercise() {
                 <li
                   className={styles.disabled}
                   id="1"
-                  style={{ color: "black" }}
+                  style={{ color: "yellow" }}
                 >
                   Name :
                   <input
