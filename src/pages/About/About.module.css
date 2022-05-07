@@ -1,6 +1,9 @@
 .main {
   overflow: hidden;
-  margin-top: 20%;
+  overflow: hidden;
+  /* border: solid red; */
+  width: 70%;
+  margin: 10% auto;
 }
 
 .exerciseTypeContainer {
@@ -29,7 +32,7 @@
   background-color: lavender;
   color: black;
   /* background-color: rebeccapurple;
-      color: var(--tan-2); */
+        color: var(--tan-2); */
   /* border: solid rebeccapurple; */
 
   font-weight: 550;

@@ -66,6 +66,20 @@ router.delete("/delete/:id", async (req, res) => {
   }
 });
 
+// edit route
+router.put("/edit/:id", async (req, res) => {
+  try {
+    const editedExercise = await Exercise.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.status(200).json(editedExercise);
+  } catch (err) {
+    res.status(400).json({ message: "failed to edit " });
+  }
+});
+
 // get exercise by id
 router.get("/:id", async (req, res) => {
   try {

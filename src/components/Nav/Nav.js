@@ -8,16 +8,26 @@ export default function Nav({ setUser }) {
     setUser(null);
     Navigate("/");
   };
+
+  // contact
+  const handleContact = () => {
+    Navigate("/contact");
+  };
+
+  //About
+  const handleAbout = () => {
+    Navigate("/about");
+  };
   return (
     <div className="Nav">
       <div className="logo"></div>
       <div className="buttons">
         <ul className="nav-list">
           <li>
-            <button>Contact</button>
+            <button onClick={handleContact}>Contact</button>
           </li>
           <li>
-            <button>About</button>
+            <button onClick={handleAbout}>About</button>
           </li>
           <li>
             <button onClick={handleLogout}>Log Out</button>

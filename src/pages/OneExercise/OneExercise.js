@@ -3,6 +3,8 @@ import styles from "./OneExercise.module.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getExerciseById } from "../../utilities/exercises-api";
+import { editById } from "../../utilities/exercises-api";
+
 export default function OneExercise() {
   // declaring varibale
   const Navigate = useNavigate();
@@ -16,7 +18,11 @@ export default function OneExercise() {
     description: "",
   });
   // query
-  const typeInput = document.getElementById("1");
+  const nameInput = document.getElementById("1");
+  const typeInput = document.getElementById("2");
+  const durationInput = document.getElementById("3");
+  const descriptionInput = document.getElementById("4");
+
   // handle back
   const handleBack = () => {
     Navigate(`/exercises/${type}`);
@@ -34,16 +40,44 @@ export default function OneExercise() {
     getExercise(id);
   }, []);
   // handle change
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    setEditExercise({ ...editExercise, [e.target.name]: e.target.value });
+  };
   // handle edit
-  const handleEdit = (e) => {
-    if (typeInput.style.color === "red") {
-      typeInput.style.color = "black";
-      typeInput.classList.add(`${styles.disabled}`);
+  const handleEdit = (key) => {
+    if (key.style.color === "red") {
+      key.style.color = "black";
+      key.classList.add(`${styles.disabled}`);
     } else {
-      typeInput.classList.remove(`${styles.disabled}`);
-      typeInput.style.color = "red";
+      key.classList.remove(`${styles.disabled}`);
+      key.style.color = "red";
     }
+  };
+  //handle submit
+  const handleSubmit = async () => {
+    const data = { ...editExercise };
+    if (data.name === "") {
+      data.name = exercise.name;
+    }
+    if (data.type === "") {
+      data.type = exercise.type;
+    }
+    if (data.duration === "") {
+      data.duration = exercise.duration;
+    }
+    if (data.description === "") {
+      data.description = exercise.description;
+    }
+    console.log(data);
+
+    try {
+      console.log(exercise._id);
+      console.log(data);
+      const response = await editById(exercise._id, data);
+    } catch (err) {
+      setError(err.message);
+    }
+    Navigate(`/exercises`);
   };
 
   return (
@@ -63,10 +97,10 @@ export default function OneExercise() {
                     onChange={handleChange}
                   />
                 </li>
-                <button onClick={handleEdit}> Edit </button>
+                <button onClick={() => handleEdit(nameInput)}> Edit </button>
               </div>
               <div className={styles.oneListItem}>
-                <li className={styles.disabled}>
+                <li className={styles.disabled} id="2">
                   Type :
                   <input
                     name="type"
@@ -74,10 +108,10 @@ export default function OneExercise() {
                     onChange={handleChange}
                   />
                 </li>
-                <button> Edit </button>
+                <button onClick={() => handleEdit(typeInput)}> Edit </button>
               </div>
               <div className={styles.oneListItem}>
-                <li className={styles.disabled}>
+                <li className={styles.disabled} id="3">
                   Duration :
                   <input
                     name="duration"
@@ -85,10 +119,10 @@ export default function OneExercise() {
                     onChange={handleChange}
                   />
                 </li>
-                <button> Edit </button>
+                <button onClick={() => handleEdit(durationInput)}>Edit</button>
               </div>
               <div className={styles.oneListItem}>
-                <li className={styles.disabled}>
+                <li className={styles.disabled} id="4">
                   Description :
                   <input
                     name="description"
@@ -96,8 +130,13 @@ export default function OneExercise() {
                     onChange={handleChange}
                   />
                 </li>
-                <button> Edit </button>
+                <button onClick={() => handleEdit(descriptionInput)}>
+                  Edit
+                </button>
               </div>
+              <button type="submit" onClick={handleSubmit}>
+                Save
+              </button>
             </ul>
           </div>
         </>

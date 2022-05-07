@@ -21,3 +21,9 @@ export function Delete(exerciseId) {
 export function getExerciseById(id) {
   return sendRequest(`${BASE_URL}/${id}`, "GET", null);
 }
+
+// edit  function
+
+export function editById(id, load) {
+  return sendRequest(`${BASE_URL}/edit/${id}`, "PUT", load);
+}

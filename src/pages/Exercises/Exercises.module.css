@@ -67,7 +67,7 @@
 
   /* float: left; */
 }
-li:hover {
+ul.navigateOptions > li:hover {
   color: rebeccapurple;
   cursor: pointer;
 

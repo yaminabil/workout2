@@ -9,6 +9,8 @@ import Nav from "../../components/Nav/Nav";
 import Footer from "../../components/Footer/Footer";
 import Category from "../Category/Category";
 import OneExercise from "../OneExercise/OneExercise";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -19,12 +21,16 @@ function App() {
 
   return (
     <div className="App">
-      <Nav setUser={setUser} />
       <main>
         {user ? (
           <>
+            <Nav setUser={setUser} />
             <Routes>
               <Route path="/exercises" element={<Exercises user={user} />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
               <Route
                 path="/exercises/:type"
                 element={<Category user={user} />}
@@ -36,7 +42,12 @@ function App() {
           </>
         ) : (
           <div>
-            <AuthPage setUser={setUser} />
+            <Nav setUser={setUser} />
+            <Routes>
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/" element={<AuthPage setUser={setUser} />} />
+            </Routes>
           </div>
         )}
       </main>

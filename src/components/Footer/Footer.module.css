@@ -1,6 +1,12 @@
 .main {
+  border-top: solid white;
+}
+
+.main {
   overflow: hidden;
-  margin-top: 20%;
+  /* border: solid red; */
+  width: 70%;
+  margin: 10% auto;
 }
 
 .exerciseTypeContainer {
@@ -12,6 +18,7 @@
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
+
   width: 80%;
   margin: 0 auto;
   column-gap: 5vw;
@@ -29,7 +36,7 @@
   background-color: lavender;
   color: black;
   /* background-color: rebeccapurple;
-      color: var(--tan-2); */
+          color: var(--tan-2); */
   /* border: solid rebeccapurple; */
 
   font-weight: 550;
@@ -80,4 +87,25 @@ label {
   border-radius: 20px;
   background-color: lavender;
   height: 3vw;
+}
+
+.social {
+  width: 7rem;
+  height: 4rem;
+}
+.socialLinkdin {
+  width: 5rem;
+  height: 4rem;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.socialTwitter {
+  width: 6rem;
+  height: 5rem;
 }
