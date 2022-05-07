@@ -88,7 +88,11 @@ export default function OneExercise() {
           <div className={styles.exercisesList}>
             <ul>
               <div className={styles.oneListItem}>
-                <li className={styles.disabled} id="1">
+                <li
+                  className={styles.disabled}
+                  id="1"
+                  style={{ color: "black" }}
+                >
                   Name :
                   <input
                     name="name"
@@ -100,7 +104,11 @@ export default function OneExercise() {
                 <button onClick={() => handleEdit(nameInput)}> Edit </button>
               </div>
               <div className={styles.oneListItem}>
-                <li className={styles.disabled} id="2">
+                <li
+                  className={styles.disabled}
+                  id="2"
+                  style={{ color: "black" }}
+                >
                   Type :
                   <input
                     name="type"
