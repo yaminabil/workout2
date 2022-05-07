@@ -119,7 +119,11 @@ export default function OneExercise() {
                 <button onClick={() => handleEdit(typeInput)}> Edit </button>
               </div>
               <div className={styles.oneListItem}>
-                <li className={styles.disabled} id="3">
+                <li
+                  className={styles.disabled}
+                  id="3"
+                  style={{ color: "black" }}
+                >
                   Duration :
                   <input
                     name="duration"
@@ -130,7 +134,11 @@ export default function OneExercise() {
                 <button onClick={() => handleEdit(durationInput)}>Edit</button>
               </div>
               <div className={styles.oneListItem}>
-                <li className={styles.disabled} id="4">
+                <li
+                  className={styles.disabled}
+                  id="4"
+                  style={{ color: "black" }}
+                >
                   Description :
                   <input
                     name="description"
