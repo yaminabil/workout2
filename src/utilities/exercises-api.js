@@ -1,5 +1,5 @@
 import sendRequest from "./send-request";
-const BASE_URL = "http://localhost:3001/api/exercises";
+const BASE_URL = "/api/exercises";
 
 // the create function
 export function Create(exerciseData) {

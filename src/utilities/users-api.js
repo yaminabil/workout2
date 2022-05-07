@@ -1,6 +1,6 @@
 import sendRequest from "./send-request";
 
-const BASE_URL = "http://localhost:3001/api/users";
+const BASE_URL = "/api/users";
 
 export async function signup(userData) {
   return sendRequest(`${BASE_URL}/signup`, "POST", userData);
