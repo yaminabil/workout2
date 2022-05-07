@@ -5,6 +5,7 @@ const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const userRouter = require("./routes/users");
 const exerciseRouter = require("./routes/exercises");
+const Exercise = require("./models/Exercise");
 app.use(express.json());
 app.use(cors());
 app.use(require("./config/checkToken"));

@@ -1,7 +1,12 @@
+.main {
+  overflow: hidden;
+}
+
 .exerciseTypeContainer {
+  /* border: solid red; */
   padding: 50px;
   background-color: lightgray;
-  border: 0.1vmin solid var(--tan-3);
+  /* border: 0.1vmin solid var(--tan-3); */
   border-radius: 20px;
   display: grid;
   grid-template-columns: auto auto;
@@ -15,6 +20,7 @@
 
 .type {
   display: grid;
+  /* border: solid red; */
   grid-column: 1/3;
   grid-row: 1/2;
   padding: 7px;
@@ -22,12 +28,13 @@
   background-color: lavender;
   color: black;
   /* background-color: rebeccapurple;
-    color: var(--tan-2); */
+      color: var(--tan-2); */
   /* border: solid rebeccapurple; */
 
   font-weight: 550;
   border-radius: 20px;
   align-items: center;
+  font-size: larger;
 }
 
 label {
@@ -37,23 +44,39 @@ label {
   /* margin-right: 2rem; */
   /* border: solid red; */
   height: 40px;
+  /* border: solid red; */
 }
 
-.NewExerciseForm {
+.exercisesList {
+  /* border: solid red; */
   border-radius: 20px;
   padding: 30px;
   display: grid;
   grid-row: 2/4;
   grid-column: 1/3;
-  background-color: lavender;
+
   /* border: solid rebeccapurple; */
 }
 
-.err {
-  color: red;
+.back {
+  height: 2vw;
+  width: 4vw;
+}
+.delete {
+  height: 2vw;
+  width: 4vw;
 }
 
-.createAnotherOne {
-  border-bottom: solid rebeccapurple;
-  height: 15rem;
+.oneListItem {
+  /* border: solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  background-color: lavender;
+  height: 3vw;
 }

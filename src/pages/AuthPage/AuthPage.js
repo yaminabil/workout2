@@ -1,7 +1,7 @@
 import styles from "./Auth.module.css";
 import { useState } from "react";
-import SignUp from "../../components/SignUp";
-import Login from "../../components/Login";
+import SignUp from "../../components/SignUp/SignUp";
+import Login from "../../components/Login/Login";
 export default function AuthPage({ setUser }) {
   const [showSignUp, setShowSignUp] = useState(false);
 

@@ -5,13 +5,12 @@ import NewExercise from "../../components/NewExercise/NewExercise";
 import SetAChallenge from "../../components/SetAChallenge/SetAChallenge";
 import PlanYourWeek from "../../components/PlanYourWeek/PlanYourWeek";
 import Music from "../../components/Music/Music";
-export default function Exercises({ user, setUser }) {
+export default function Exercises({ user }) {
   //declare variables
-  const [exercise, setExercies] = useState([]);
+
   const [choice, setChoice] = useState("Type");
   //functions
   const handleClick = (choice) => {
-    // e.preventDefault();
     setChoice(choice);
   };
   //return
@@ -39,7 +38,7 @@ export default function Exercises({ user, setUser }) {
 
         {/* the middle part */}
         {choice === "Type" ? (
-          <Type />
+          <Type user={user} />
         ) : choice === "New Exercise" ? (
           <NewExercise setChoice={setChoice} />
         ) : choice === "Set A Challenge" ? (

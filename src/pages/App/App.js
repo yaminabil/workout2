@@ -4,10 +4,11 @@ import AuthPage from "../AuthPage/AuthPage";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
 import { getUser, logout, checkToken } from "../../utilities/users-service";
-import NewExercise from "../NewExercise/NewExercise";
-import Exercise from "../Exercises/Exercises";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
+import Exercises from "../Exercises/Exercises";
+import Nav from "../../components/Nav/Nav";
+import Footer from "../../components/Footer/Footer";
+import Category from "../Category/Category";
+import OneExercise from "../OneExercise/OneExercise";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -23,12 +24,14 @@ function App() {
         {user ? (
           <>
             <Routes>
-              <Route path="/exercises" element={<Exercise user={user} />} />
+              <Route path="/exercises" element={<Exercises user={user} />} />
               <Route
-                path="/exercises/new"
-                element={<NewExercise user={user} />}
+                path="/exercises/:type"
+                element={<Category user={user} />}
               />
-              <Route path="/*" element={<Navigate to="/exercises/new" />} />
+              <Route path="/exercises/:type/:id" element={<OneExercise />} />
+
+              <Route path="/*" element={<Navigate to="/exercises" />} />
             </Routes>
           </>
         ) : (
