@@ -6,7 +6,7 @@ export default function About() {
       <div className={styles.exerciseTypeContainer}>
         <h1 className={styles.type}> About</h1>
         <p>
-          This a workout About that can help any individual to track his/her
+          This is a workout About that can help any individual to track his/her
           workout journey , by saving and creating new exercises and categorize
           them into 4 types of workout endurance , strength , balance and
           flexibility . Also can help to set challenges and to plan someone’s

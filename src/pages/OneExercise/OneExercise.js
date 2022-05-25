@@ -75,135 +75,143 @@ export default function OneExercise() {
   };
 
   return (
-    <div className={styles.exerciseTypeContainer}>
-      {exercise ? (
-        <>
-          <h1 className={styles.type}>{exercise.name} </h1>
-          <div className={styles.exercisesList}>
-            <ul>
-              {/* first li in the ul */}
-              {active === "name" ? (
-                <div className={styles.oneListItem}>
-                  <li style={{ color: "red" }}>
-                    name:
-                    <input
-                      name="name"
-                      defaultValue={exercise.name}
-                      onChange={handleChange}
-                    />
-                  </li>
-                  <button onClick={() => handleEdit("name")}> Edit </button>
-                </div>
-              ) : (
-                <div className={styles.oneListItem}>
-                  <li className={styles.disabled} style={{ color: "black" }}>
-                    name:
-                    <input
-                      name="name"
-                      defaultValue={exercise.name}
-                      onChange={handleChange}
-                    />
-                  </li>
-                  <button onClick={() => handleEdit("name")}> Edit </button>
-                </div>
-              )}
-              {/* second li in the ul */}
-              {active === "type" ? (
-                <div className={styles.oneListItem}>
-                  <li style={{ color: "red" }}>
-                    type:
-                    <input
-                      name="type"
-                      defaultValue={exercise.type}
-                      onChange={handleChange}
-                    />
-                  </li>
-                  <button onClick={() => handleEdit("type")}> Edit </button>
-                </div>
-              ) : (
-                <div className={styles.oneListItem}>
-                  <li className={styles.disabled} style={{ color: "black" }}>
-                    type:
-                    <input
-                      name="type"
-                      defaultValue={exercise.type}
-                      onChange={handleChange}
-                    />
-                  </li>
-                  <button onClick={() => handleEdit("type")}> Edit </button>
-                </div>
-              )}
-              {/* third li in the ul */}
-              {active === "duration" ? (
-                <div className={styles.oneListItem}>
-                  <li style={{ color: "red" }}>
-                    duration:
-                    <input
-                      name="duration"
-                      defaultValue={exercise.duration}
-                      onChange={handleChange}
-                    />
-                  </li>
-                  <button onClick={() => handleEdit("duration")}> Edit </button>
-                </div>
-              ) : (
-                <div className={styles.oneListItem}>
-                  <li className={styles.disabled} style={{ color: "black" }}>
-                    duration:
-                    <input
-                      name="duration"
-                      defaultValue={exercise.duration}
-                      onChange={handleChange}
-                    />
-                  </li>
-                  <button onClick={() => handleEdit("duration")}> Edit </button>
-                </div>
-              )}
-              {/* third li in the ul */}
-              {active === "description" ? (
-                <div className={styles.oneListItem}>
-                  <li style={{ color: "red" }}>
-                    description:
-                    <input
-                      name="description"
-                      defaultValue={exercise.description}
-                      onChange={handleChange}
-                    />
-                  </li>
-                  <button onClick={() => handleEdit("description")}>
-                    Edit
-                  </button>
-                </div>
-              ) : (
-                <div className={styles.oneListItem}>
-                  <li className={styles.disabled} style={{ color: "black" }}>
-                    description:
-                    <input
-                      name="description"
-                      defaultValue={exercise.description}
-                      onChange={handleChange}
-                    />
-                  </li>
-                  <button onClick={() => handleEdit("description")}>
-                    {" "}
-                    Edit{" "}
-                  </button>
-                </div>
-              )}
+    <div className={styles.main}>
+      <div className={styles.exerciseTypeContainer}>
+        {exercise ? (
+          <>
+            <h1 className={styles.type}>{exercise.name} </h1>
+            <div className={styles.exercisesList}>
+              <ul>
+                {/* first li in the ul */}
+                {active === "name" ? (
+                  <div className={styles.oneListItem}>
+                    <li style={{ color: "red" }}>
+                      name:
+                      <input
+                        name="name"
+                        defaultValue={exercise.name}
+                        onChange={handleChange}
+                      />
+                    </li>
+                    <button onClick={() => handleEdit("name")}> Edit </button>
+                  </div>
+                ) : (
+                  <div className={styles.oneListItem}>
+                    <li className={styles.disabled} style={{ color: "black" }}>
+                      name:
+                      <input
+                        name="name"
+                        defaultValue={exercise.name}
+                        onChange={handleChange}
+                      />
+                    </li>
+                    <button onClick={() => handleEdit("name")}> Edit </button>
+                  </div>
+                )}
+                {/* second li in the ul */}
+                {active === "type" ? (
+                  <div className={styles.oneListItem}>
+                    <li style={{ color: "red" }}>
+                      type:
+                      <input
+                        name="type"
+                        defaultValue={exercise.type}
+                        onChange={handleChange}
+                      />
+                    </li>
+                    <button onClick={() => handleEdit("type")}> Edit </button>
+                  </div>
+                ) : (
+                  <div className={styles.oneListItem}>
+                    <li className={styles.disabled} style={{ color: "black" }}>
+                      type:
+                      <input
+                        name="type"
+                        defaultValue={exercise.type}
+                        onChange={handleChange}
+                      />
+                    </li>
+                    <button onClick={() => handleEdit("type")}> Edit </button>
+                  </div>
+                )}
+                {/* third li in the ul */}
+                {active === "duration" ? (
+                  <div className={styles.oneListItem}>
+                    <li style={{ color: "red" }}>
+                      duration:
+                      <input
+                        name="duration"
+                        defaultValue={exercise.duration}
+                        onChange={handleChange}
+                      />
+                    </li>
+                    <button onClick={() => handleEdit("duration")}>
+                      {" "}
+                      Edit{" "}
+                    </button>
+                  </div>
+                ) : (
+                  <div className={styles.oneListItem}>
+                    <li className={styles.disabled} style={{ color: "black" }}>
+                      duration:
+                      <input
+                        name="duration"
+                        defaultValue={exercise.duration}
+                        onChange={handleChange}
+                      />
+                    </li>
+                    <button onClick={() => handleEdit("duration")}>
+                      {" "}
+                      Edit{" "}
+                    </button>
+                  </div>
+                )}
+                {/* third li in the ul */}
+                {active === "description" ? (
+                  <div className={styles.oneListItem}>
+                    <li style={{ color: "red" }}>
+                      description:
+                      <input
+                        name="description"
+                        defaultValue={exercise.description}
+                        onChange={handleChange}
+                      />
+                    </li>
+                    <button onClick={() => handleEdit("description")}>
+                      Edit
+                    </button>
+                  </div>
+                ) : (
+                  <div className={styles.oneListItem}>
+                    <li className={styles.disabled} style={{ color: "black" }}>
+                      description:
+                      <input
+                        name="description"
+                        defaultValue={exercise.description}
+                        onChange={handleChange}
+                      />
+                    </li>
+                    <button onClick={() => handleEdit("description")}>
+                      {" "}
+                      Edit{" "}
+                    </button>
+                  </div>
+                )}
 
-              <button type="submit" onClick={handleSubmit}>
-                Save
-              </button>
-            </ul>
-          </div>
-        </>
-      ) : (
-        <h1 className={styles.type}>...loading</h1>
-      )}
+                <button type="submit" onClick={handleSubmit}>
+                  Save
+                </button>
+              </ul>
+            </div>
+          </>
+        ) : (
+          <h1 className={styles.type}>...loading</h1>
+        )}
 
-      <button onClick={handleBack} className={styles.back}>
-        back
-      </button>
+        <button onClick={handleBack} className={styles.back}>
+          back
+        </button>
+      </div>
     </div>
   );
 }

@@ -18,11 +18,20 @@ export default function Nav({ setUser }) {
   const handleAbout = () => {
     Navigate("/about");
   };
+
+  //Home
+  const handleHome = () => {
+    Navigate("/exercises");
+  };
+
   return (
     <div className="Nav">
       <div className="logo"></div>
       <div className="buttons">
         <ul className="nav-list">
+          <li>
+            <button onClick={handleHome}>Home</button>
+          </li>
           <li>
             <button onClick={handleContact}>Contact</button>
           </li>
